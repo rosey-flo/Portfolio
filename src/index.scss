@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$primaryColor: #c5a69090;
+$secondaryColor: #524c40;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+// body {
+//     background-image: url('../public/images/portfolio_background\ v3.jpeg');
+//     background-attachment: fixed;
+// }
+
+html,  body, #root {
+  height: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+// GLOBAL CLASSES
+.row, .column {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.light-font {
+  font-weight: 300;
+}
+
+.alert-message {
+  padding: 10px 0;
+  color: #165c1a;
+}
+
+// CUSTOM STYLES
+header {
+  padding: 10px 5%;
+  background: $primaryColor;
+  color: $secondaryColor;
+  position: sticky;
+  top: 0;
+  nav {
+    a {
+      color: $secondaryColor;
+      &:not(:last-child) {
+        margin-right: 7px;
+      }
+       &:hover {
+        text-decoration: none;
+        color:#fff;
+        font-style: italic;
+      }
+      &.active {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+main {
+  padding: 0 5%;
+}
+
+footer {
+  padding: 25px 5%;
+}
+
+// Home Styles
+.home-hero {
+  img {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    font-weight: 300;
+  }
+}
+
+.project-container {
+    margin: 35px 50px;
+}
+
+.overlay {
+    position:absolute;
+    margin: 300px auto;
+    z-index: 10;
+    font-weight: 470;
+    font-size: 68px;
+    color:#361d0e
+
+} 
+
+//WORK ITEM SECTION
+
+section.work {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    color: #333;
+    margin: 35px 0;
+
+    article.work-item {
+        padding: 15px;
+        background-size: cover;
+        display: grid;
+        position: relative;
+        overflow: hidden;
+
+        h4 {
+            color: #361d0e;
+            font-weight: 450;
+            font-size: 125%;
+        }
+
+        p {
+            margin: 15px 45px 10px 45px;
+            color: #333;
+            text-align: center;
+        }
+
+        p.technologies {
+            font-size: smaller;
+            color: #25201c9c;
+            text-align: center;
+        }
+
+        .site-image {
+            margin: 15px 0; /* Space between description and screenshot */
+            text-align: center; /* Center the screenshot */
+            position: relative; /* Position relative for absolute positioning */
+        }
+
+        .screenshot-container {
+            position: relative;
+            opacity: 0.7; /* Start slightly opaque */
+            transition: opacity 0.3s ease; /* Smooth transition */
+        }
+
+        .screenshot-container:hover {
+            opacity: 1; /* Full opacity on hover */
+        }
+
+        a.live-site-link {
+            position: absolute; /* Position absolutely within the container */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust position */
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.3s ease; /* Smooth transition */
+        }
+
+        .screenshot-container:hover a.live-site-link {
+            opacity: 1; /* Show logo on hover */
+        }
+
+        img.screenshot {
+            max-width: 90%; /* Responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        img.live-site-logo {
+            width: 50px; /* Adjust as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+    }
+}
+//About Page Styles
+
+.about-container {
+    margin: 25px 50px;
+}
+
+
+// Contact Page Styles
+form.contact-form {
+  margin: 15px auto 0;
+  width: 450px;
+  > * {
+    padding: 6px 10px;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    &:focus {
+      outline: 1px solid $primaryColor;
+    }
+  }
+
+  label {
+    font-size: .85rem;
+    color: #555;
+  }
+
+  input, textarea, select {
+    border: 1px solid #ccc;
+    color: #555;
+  }
+
+  button {
+    background: $primaryColor;
+    color: $secondaryColor;
+  }
+}
+
+//About Me Page
+.about-me {
+    display: flex; /* Use flexbox for layout */
+    margin: 20px 50px; /* Adjust margin as needed */
+}
+
+.about-summary {
+    flex: 2; /* Takes more space */
+    margin-right: 20px; /* Space between the about me and skills */
+}
+
+.certificates {
+    flex: 2; /* Takes the same space as the about section */
+    margin-bottom: 20px; /* Space below certificates */
+}
+
+.certificates-images {
+    display: flex;
+    gap: 20px; /* Space between the images */
+    justify-content: start; /* Align images to the start */
+}
+
+.certificate, .badge {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.technical-skills {
+    flex: 1; /* Takes up the remaining space */
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 15px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+h2, h3, h4 {
+    color: #361d0e; /* Consistent header color */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+li {
+    margin: 5px 0; /* Space between list items */
+}
+
+// 404 Page
+.dino-image {
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+// // Footer styles
+// footer.main-footer {
+  
+// }

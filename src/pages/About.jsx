@@ -2,32 +2,60 @@
 function AboutMe() {
     return (
         <section className="about-me">
-            <div>
-                <div className="about-summary">
-                    <h2>About Me</h2>
-                    <p>
-                        Innovative and detail-oriented Full Stack Developer with a robust background in managing and optimizing front and back-end interfaces.
-                        Leveraging experience in patient care coordination, I bring a unique perspective to development, combining technical expertise with strong organizational and communication skills.
-                        I excel at building scalable and efficient applications while ensuring seamless user experiences. Adept at translating business requirements into technical solutions,
-                        I am passionate about creating impactful software and driving continuous improvement in fast-paced environments.
-                    </p>
+            <div className="left-sideview">
+                <div className="profile">
+                    <img
+                        src="/images/personal-photo.jpeg"
+                        alt="Bachelor Degree in Public Health"
+                        className="profile-pic"
+                    />
+                    <div className="about-summary">
+                        <h2>About Me</h2>
+                        <p>
+                            Innovative and detail-oriented Full Stack Developer with a robust background in managing and optimizing front and back-end interfaces.
+                            Leveraging experience in patient care coordination, I bring a unique perspective to development, combining technical expertise with strong organizational and communication skills.
+                            I excel at building scalable and efficient applications while ensuring seamless user experiences. Adept at translating business requirements into technical solutions,
+                            I am passionate about creating impactful software and driving continuous improvement in fast-paced environments.
+                        </p>
+                    </div>
                 </div>
-                <div className="certificates">
-                    <h3>Certifications</h3>
-                    <div className="certificates-images">
-                        <img
-                            src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/116529802"
-                            alt="Certificate"
-                            className="certificate"
-                        />
-                        <img
+                <div className="left-bottom">
+                    <div className="certificates">
+                        <h3>Certifications and Degrees</h3>
+                        <div className="certificates-images">
+                            <img
+                                src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/116529802"
+                                alt="Certificate"
+                                className="certificate"
+                            />
+                            {/* <img
                             src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/116529802"
                             alt="Badge"
                             className="badge"
-                        />
+                        /> */}
+                            <img
+                                src="/images/bachelor-degree.jpeg"
+                                alt="Bachelor Degree in Public Health"
+                                className="badge"
+                            />
+                        </div>
+                    </div>
+
+
+
+                    <div className="hobbies">
+                        <h3>Hobbies and Interests</h3>
+                        <ul>
+                            <li>- Classic Literature</li>
+                            <li>- Healthcare Innovation Podcasts</li>
+                            <li>- Nutrition and Health</li>
+                            <li>- Music Exploration</li>
+                        </ul>
                     </div>
                 </div>
+
             </div>
+            {/* AREA FOR RIGHT SIDE TECH SKILLS */}
             <div className="technical-skills">
                 <h3>Technical Skills</h3>
                 <h4>Softwares/Platforms</h4>

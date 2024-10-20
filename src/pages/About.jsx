@@ -12,8 +12,8 @@ function AboutMe() {
                     <div className="about-summary">
                         <h2>About Me</h2>
                         <p>
-                            Innovative and detail-oriented Full Stack Developer with a robust background in managing and optimizing front and back-end interfaces.
-                            Leveraging experience in patient care coordination, I bring a unique perspective to development, combining technical expertise with strong organizational and communication skills.
+                            Innovative and detail-oriented, I am a Full Stack Developer with a robust background in managing and optimizing front and back-end interfaces.
+                            My aim is to leverage my experience in patient care coordination to bring a unique perspective to development, combining technical expertise with strong organizational and communication skills.
                             I excel at building scalable and efficient applications while ensuring seamless user experiences. Adept at translating business requirements into technical solutions,
                             I am passionate about creating impactful software and driving continuous improvement in fast-paced environments.
                         </p>

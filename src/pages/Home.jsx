@@ -1,5 +1,5 @@
 
-import WorkItem from '../components/Workitem'
+import WorkItem from '../components/WorkItem.jsx';
 
 const apps = [
   {
